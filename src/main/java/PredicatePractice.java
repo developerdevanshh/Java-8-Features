@@ -14,9 +14,23 @@ public class PredicatePractice {
 
 
         // A Predicate that checks if a String is a palindrome.
+//        Predicate<String> isPalindrome = str -> {
+//            String reversed = new StringBuilder(str).reverse().toString();
+//            return str.equals(reversed);
+//        };
+
         Predicate<String> isPalindrome = str -> {
-            String reversed = new StringBuilder(str).reverse().toString();
-            return str.equals(reversed);
+            int left = 0;
+            int right = str.length() - 1;
+
+            while (left< right){
+                if(str.charAt(left) != str.charAt(right)){
+                    return false;
+                }
+                left++;
+                right--;
+            }
+            return true;
         };
 
         System.out.println(isPalindrome.test("madam"));
