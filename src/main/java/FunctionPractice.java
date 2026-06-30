@@ -7,14 +7,11 @@ public class FunctionPractice {
 
         // Chaining - first strLength then square
         Function<String,Integer> lengthSquared = strLength.andThen(square);
-//        Function<Integer, String> intToString =  lengthSquared.andThen(result -> "Result: " + result);
-//        Function<Integer, String> formatResult =
+//        Function<String, String> formatResult =
 //                lengthSquared.andThen(result -> "Result: " + result);
-        Function<String, String> formatResult =
-                lengthSquared.andThen(result -> "Result: " + result);
 
         System.out.println(strLength.apply("Hello"));
         System.out.println(lengthSquared.apply("Hello"));
-        System.out.println(formatResult.apply("Hello"));
+//        System.out.println(formatResult.apply("Hello"));
     }
 }
