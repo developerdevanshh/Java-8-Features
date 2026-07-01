@@ -6,7 +6,7 @@ public class StreamFilterMapPractice {
         List<String> names = Arrays.asList("Rahul","Amit","Sara","Raj","Rohan");
 
         List<String> result = names.stream()
-                .filter(name -> name.length() > 3)
+                .filter(name -> name.length() > 4)
                 .map(String::toUpperCase)
                 .collect(Collectors.toList());
 
