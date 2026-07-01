@@ -19,16 +19,6 @@ public class LazyEvaluationPractice {
                 })
                 .findFirst(); // short-circuits - stops after first match
 
-        Optional<Integer> result = numbers.stream()
-                .filter(n->{
-                    System.out.println("Filtering: " + n);
-                    return n>2;
-                })
-                .map(n->{
-                    System.out.println("Mapping: " + n);
-                    return n*n;
-                })
-                .findFirst(); // short-circuits - stops after first match
 
         System.out.println("Result: " + result.get());
     }
