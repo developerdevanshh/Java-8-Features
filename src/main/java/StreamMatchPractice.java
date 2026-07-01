@@ -15,7 +15,7 @@ public class StreamMatchPractice {
 //        System.out.println("First odd: " + firstOdd.orElse(-1));
 
         List<String> names = Arrays.asList("Rahul","Amit","Sara","Raj","Priya","Sam");
-        Boolean matchString = names.stream().allMatch("Dev");
+        Boolean matchString = names.stream().allMatch(n->n.equals("Dev"));
         System.out.println(matchString);
     }
 }
