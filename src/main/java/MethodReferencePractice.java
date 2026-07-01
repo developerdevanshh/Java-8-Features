@@ -26,6 +26,7 @@ public class MethodReferencePractice {
         // In Streams
         List<String> names = Arrays.asList("rahul","amit","sara");
         names.stream().map(String::toUpperCase).forEach(System.out::println);
+        names.stream().sorted(String::compareTo).forEach(System.out::println);
     }
 
 }
