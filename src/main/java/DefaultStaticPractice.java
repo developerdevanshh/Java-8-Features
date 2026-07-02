@@ -1,3 +1,9 @@
+interface Electric {
+    default void chargeBattery(){
+        System.out.println("Electric motor starts.");
+    }
+}
+
 interface Vehicle {
     void start();
 
@@ -10,7 +16,7 @@ interface Vehicle {
     }
 }
 
-class Car implements Vehicle{
+class Car implements Vehicle, Electric{
     @Override
     public void start() {
         System.out.println("Car Starting");
@@ -25,6 +31,11 @@ class Car implements Vehicle{
     @Override
     public void stop() {
         Vehicle.super.stop();
+    }
+
+    @Override
+    public void chargeBattery() {
+        System.out.println("Electric Car.");
     }
 }
 
