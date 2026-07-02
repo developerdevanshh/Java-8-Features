@@ -33,9 +33,15 @@ class Car implements Vehicle, Electric{
         Vehicle.super.stop();
     }
 
+//    @Override
+//    public void chargeBattery() {
+//        System.out.println("Electric Car.");
+//    }
+
+
     @Override
     public void chargeBattery() {
-        System.out.println("Electric Car.");
+        Electric.super.chargeBattery();
     }
 }
 
